@@ -1,0 +1,17 @@
+#TeacherForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius:10px ;
+    background-color: bisque;
+    padding: 10px;
+    position: absolute;
+    left: 25%;
+    border: none !important;
+}
+#divform{
+    
+   position: relative;
+    border: none;
+}
