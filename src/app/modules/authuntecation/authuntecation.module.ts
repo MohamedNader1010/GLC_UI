@@ -1,3 +1,6 @@
+import { AuthentcationService } from 'src/app/service/auth/authentcation.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './compenent/login/login.component';
@@ -13,11 +16,17 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     LoginComponent,
     SignUpComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent, 
+    
   ],
   imports: [
     CommonModule,
-    SharedModule
-  ]
+    SharedModule, 
+    AuthenticationRoutingModule,
+    ReactiveFormsModule
+  ],
+  providers:[AuthentcationService],
+  
+
 })
 export class AuthuntecationModule { }
