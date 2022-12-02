@@ -2,6 +2,7 @@ import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Student } from 'src/app/Models/student';
+import { Observable } from 'rxjs';
 
 const IS_EMAIL_EXIST_URL = "emailExist"
 const IS_NAME_EXIST_URL = "nameExist"
@@ -14,7 +15,11 @@ export class AuthentcationService implements OnInit {
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
   }
-
+  public isLogin = false;
+  Login(obj:{}):Observable<any> 
+  {
+    return this.http.post(`${environment.apiUrl+"/api/account/login"}`,obj);
+  }
   public addStudent(student?: Student) {
 
     this.http.post(`${environment.apiUrl}/${ADD_URL}`, student).subscribe(
