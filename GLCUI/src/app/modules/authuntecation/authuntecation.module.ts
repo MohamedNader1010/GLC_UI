@@ -5,9 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
