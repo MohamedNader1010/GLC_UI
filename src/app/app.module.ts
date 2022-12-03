@@ -1,3 +1,4 @@
+import { LoginComponent } from './modules/authuntecation/compenent/login/login.component';
 
 import { AuthentcationService } from 'src/app/service/auth/authentcation.service';
 import { NgModule } from '@angular/core';

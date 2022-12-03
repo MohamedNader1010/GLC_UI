@@ -3,12 +3,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/Models/student';
 import { FormBuilder, Validators, FormGroup, AbstractControl, ValidationErrors } from '@angular/forms';
-import { SignupValidation } from './customValidation';
+
 import { AuthentcationService } from 'src/app/service/auth/authentcation.service';
-import { Observable } from 'rxjs/internal/Observable';
 import { Level } from 'src/app/Persistences/Enums';
-import { group } from '@angular/animations';
-import { concatWith } from 'rxjs';
+
+import { SignupValidation } from './customValidation';
 
 @Component({
   selector: 'app-sign-up',
@@ -101,13 +100,13 @@ export class SignUpComponent implements OnInit {
 
   private mappingStudentData(): Student {
     console.log(this.f['email'].value)
-    
+
     this.student.Email = this.f['email'].value
     this.student.UserName = this.f['name'].value
     this.student.Password = this.f['password'].value
     this.student.ConfirmPassword = this.f['confirmPassword'].value
     this.student.Age = this.f['age'].value
-    this.student.Level = this.f['level'].value 
+    this.student.Level = this.f['level'].value
     this.student.Gender = this.f['gender'].value
     this.student.Address = this.f['address'].value
     this.student.ParentEmail = this.f['parentEmail'].value
@@ -117,5 +116,6 @@ export class SignUpComponent implements OnInit {
   submit() {
     let st = this.mappingStudentData();
     this.authService.addStudent(st)
+    //NavigateTologinPage
   }
 }

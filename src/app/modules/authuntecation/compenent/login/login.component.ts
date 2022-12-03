@@ -1,6 +1,6 @@
 import { Component, ElementRef, inject, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import{Logins} from 'src/app/Models/logins';
+import { Logins } from 'src/app/Models/logins';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthentcationService } from 'src/app/service/auth/authentcation.service';
 import jwt_decode from "jwt-decode";
@@ -11,7 +11,6 @@ import { elementAt } from 'rxjs';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
 export class LoginComponent implements OnInit {
   errors: string = '';
   Roles:Logins|undefined;
