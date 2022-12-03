@@ -11,7 +11,8 @@ import { GeneralModule } from './modules/general/general.module';
 import { AuthuntecationModule } from './modules/authuntecation/authuntecation.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { ChatModule } from './modules/chat/chat.module/chat.module';
-
+import { StudentModule } from './modules/student/student/student.module';
+import { TeacherModule } from './modules/teacher/teacher/teacher.module';
 
 
 
@@ -28,7 +29,9 @@ import { ChatModule } from './modules/chat/chat.module/chat.module';
     DashboardModule,
     GeneralModule,
     HttpClientModule,
-    ChatModule
+    ChatModule,
+    StudentModule,
+    TeacherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

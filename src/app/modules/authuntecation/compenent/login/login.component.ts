@@ -70,8 +70,9 @@ complete: () => {
         this.Ilogin.role="Student";
         this.Ilogin.Username=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"]
         this.Ilogin.Id=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
-
-          // this.route.navigate(['']);
+        sessionStorage.setItem("Login data",JSON.stringify({role:this.Ilogin.role,username:this.Ilogin.Username,Id:this.Ilogin.Id}))
+      console.log(sessionStorage.getItem("Login data"));
+           this.route.navigate(['stdgroup']);
 
   }
   if(this.Decodedtooken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]=="Teacher")
@@ -81,7 +82,8 @@ complete: () => {
         this.Ilogin.Username=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"]
         this.Ilogin.Id=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
           // this.route.navigate(['']);
-
+          sessionStorage.setItem("Login data",JSON.stringify({role:this.Ilogin.role,username:this.Ilogin.Username,Id:this.Ilogin.Id}))
+          console.log(sessionStorage.getItem("Login data"));
   }
   if(this.Decodedtooken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]=="Admin")
   {
@@ -90,13 +92,12 @@ complete: () => {
         this.Ilogin.Username=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"]
         this.Ilogin.Username=this.Decodedtooken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"]
 
+        sessionStorage.setItem("Login data",JSON.stringify({role:this.Ilogin.role,username:this.Ilogin.Username,Id:this.Ilogin.Id}))
+      console.log(sessionStorage.getItem("Login data"));
           // this.route.navigate(['']);
 
   }
-  sessionStorage.setItem("Login data",JSON.stringify({role:this.Ilogin.role,username:this.Ilogin.Username,Id:this.Ilogin.Id}))
-console.log(sessionStorage.getItem("Login data"));
 },
 });
-
   }
 }
